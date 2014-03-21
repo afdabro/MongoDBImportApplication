@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBImportDataApplication", "MongoDBImportDataApplication\MongoDBImportDataApplication.csproj", "{6BDB8CDC-E990-481F-8DE3-24B8E3D111DB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{B1BA87EF-EC67-4F99-BA8C-E341AB6F2EAD}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+		.nuget\NuGet.targets = .nuget\NuGet.targets
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDBRepository", "MongoDBRepository\MongoDBRepository.csproj", "{7D88ABDE-4C8E-42BE-970D-3AEB54DE12ED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Common", "Common\Common.csproj", "{161D79AF-5266-49A7-9273-0DC170C698B8}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BDB8CDC-E990-481F-8DE3-24B8E3D111DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BDB8CDC-E990-481F-8DE3-24B8E3D111DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BDB8CDC-E990-481F-8DE3-24B8E3D111DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BDB8CDC-E990-481F-8DE3-24B8E3D111DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7D88ABDE-4C8E-42BE-970D-3AEB54DE12ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7D88ABDE-4C8E-42BE-970D-3AEB54DE12ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7D88ABDE-4C8E-42BE-970D-3AEB54DE12ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7D88ABDE-4C8E-42BE-970D-3AEB54DE12ED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{161D79AF-5266-49A7-9273-0DC170C698B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{161D79AF-5266-49A7-9273-0DC170C698B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{161D79AF-5266-49A7-9273-0DC170C698B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{161D79AF-5266-49A7-9273-0DC170C698B8}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
