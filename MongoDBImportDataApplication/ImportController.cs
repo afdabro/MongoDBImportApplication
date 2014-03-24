@@ -4,15 +4,20 @@
 
 using Common;
 using Common.Repository.MongoDB;
+using System.Collections.Generic;
+using System.Dynamic;
 
 namespace MongoDBImportDataApplication
 {
+    /// <summary>
+    /// Import Controller for importing data into MongoDB
+    /// </summary>
     public class ImportController
     {
         /// <summary>
         /// Gets or sets the dynamic entity
         /// </summary>
-        public DynamicEntity entity { get; set; }
+        public DynamicEntityContainer entity { get; set; }
 
         /// <summary>
         /// Gets or sets the repository
@@ -22,14 +27,7 @@ namespace MongoDBImportDataApplication
         public ImportController()
         {
             this.repository = new MongoDBRepository();
-        }
-
-        /// <summary>
-        /// Initialize a new instance of the Dynamic Entity class
-        /// </summary>
-        public void InitializeEntity()
-        {
-            this.entity = new DynamicEntity();
+            this.entity = new DynamicEntityContainer();
         }
 
         /// <summary>
@@ -38,7 +36,7 @@ namespace MongoDBImportDataApplication
         /// <param name="collectionName"></param>
         public void CommitEntity(string collectionName)
         {
-            this.repository.CreateEntity<DynamicEntity>(collectionName, entity);
+            this.repository.CreateEntity<DynamicEntity>(collectionName, entity.dataDictionary);
         }
 
         /// <summary>
@@ -47,6 +45,7 @@ namespace MongoDBImportDataApplication
         public void ClearEntity()
         {
             this.entity = null;
+            this.entity = new DynamicEntityContainer();
         }
     }
 }

@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DynamicEntity.cs" />
+    <Compile Include="DynamicEntityContainer.cs" />
     <Compile Include="IUniqueId.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

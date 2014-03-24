@@ -7,7 +7,26 @@
       d:DesignHeight="300" d:DesignWidth="300"
 	Title="ImportSingleEntity">
 
-    <Grid>
-        
+    <Grid Margin="0,0,-655,0">
+        <Button Content="Clear Entity" HorizontalAlignment="Left" Margin="10,270,0,0" VerticalAlignment="Top" Width="90" Click="ClearEntity_Click"/>
+        <Button Content="Commit Entity" HorizontalAlignment="Left" Margin="10,245,0,0" VerticalAlignment="Top" Width="90" Click="CommitEntity_Click"/>
+        <Label Content="Collection Name:" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="tbCollectionName" HorizontalAlignment="Left" Height="23" Margin="131,14,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add Property" HorizontalAlignment="Left" Margin="334,61,0,0" VerticalAlignment="Top" Width="105" Click="AddProperty_Click"/>
+        <Button Content="Remove Property" HorizontalAlignment="Left" Margin="334,96,0,0" VerticalAlignment="Top" Width="105" Click="RemoveProperty_Click"/>
+        <Label Content="Property Name:" HorizontalAlignment="Left" Margin="334,14,0,0" VerticalAlignment="Top"/>
+        <TextBox Name="tbPropertyName" HorizontalAlignment="Left" Height="23" Margin="452,22,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <CheckBox Name="cGenerate" Content="Generate" HorizontalAlignment="Left" Margin="452,70,0,0" VerticalAlignment="Top"/>
+        <ComboBox Name="cbPropertyType" Loaded="cbPropertyType_Loaded" HorizontalAlignment="Left" Margin="479,116,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbPropertyType_SelectionChanged"/>
+        <TextBox Name="tbPropertyValue" HorizontalAlignment="Left" Height="23" Margin="646,116,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
+        <ListView ItemsSource="{DynamicResource Entity}" HorizontalAlignment="Left" Height="100" Margin="275,140,0,0" VerticalAlignment="Top" Width="175">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="PropertyName" DisplayMemberBinding="{Binding Key}"/>
+                    <GridViewColumn Header="PropertyValue" DisplayMemberBinding="{Binding Value}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+
     </Grid>
 </Page>

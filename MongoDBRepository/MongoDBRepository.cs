@@ -59,11 +59,8 @@ namespace Common.Repository.MongoDB
         /// <param name="collectionName">Collection name</param>
         /// <param name="entity">Entity to create</param>
         /// <returns>Created Entity</returns>
-        public T CreateEntity<T>(string collectionName, T entity) where T : class, IUniqueId
+        public T CreateEntity<T>(string collectionName, T entity) where T : DynamicEntity
         {
-            // If the Unique Id is not set create a new Guid
-            if (entity.Id == null)
-                entity.Id = new Guid();
 
             var collection = database.GetCollection<T>(collectionName);
             var result = collection.Insert(entity);
